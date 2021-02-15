@@ -1,0 +1,34 @@
+{
+    "name": "syvbyen/share",
+    "description": "Social share buttons for your Laravel project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas B. W.",
+            "email": "thomasbw@7byen.no"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "syvbyen\\Share\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "syvbyen\\Share\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "syvbyen\\Share\\ShareServiceProvider"
+            ]
+        }
+    }
+
+}
