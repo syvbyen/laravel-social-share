@@ -2,4 +2,5 @@
 
 return [
     'share' => 'Del det',
+    'email' => 'Epost',
 ];

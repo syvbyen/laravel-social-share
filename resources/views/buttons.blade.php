@@ -6,13 +6,14 @@
 
         <a href="{{ $channel['href'] }}" class="social-share__link">
 
+
             @isset($channel['icon'])
 
                 <i class="social-share__icon {{ $channel['icon'] }}"></i>
 
             @endisset
 
-            <span class="social-share__name">@lang('share::channels.' . $channel['name'])</span>
+            <span class="social-share__name">{{ $channel['name'] }}</span>
 
         </a>
 

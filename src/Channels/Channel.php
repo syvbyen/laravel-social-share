@@ -2,6 +2,7 @@
 
 namespace syvbyen\Share\Channels;
 
+use Exception;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
 
@@ -18,9 +19,10 @@ abstract class Channel
         $this->setUrl();
         $this->setIcon();
 
-
         $this->register();
     }
+
+    abstract protected function register();
 
     protected function setHref($href)
     {
@@ -29,6 +31,10 @@ abstract class Channel
 
     public function getData()
     {
+        if (!isset($this->href)) {
+            throw new Exception('The $href property is empty. You need to give your class a shareable link');
+        }
+
         return [
             'href' => $this->href,
             'name' => $this->name,
@@ -36,10 +42,23 @@ abstract class Channel
         ];
     }
 
-    protected function setName()
+    /** 
+     * This defaults to capitalizing the class name
+     * as the name to show in the view. If the
+     * word needs a translation, or if the
+     * capitalization is special like 
+     * "LinkedIn" you can run the 
+     * method in the register 
+     * function with you new name.
+     * */
+    protected function setName($name = null)
     {
-        $explodedNamespace = explode('\\', get_called_class());
-        $this->name = Str::lower(array_pop($explodedNamespace));
+        if (!isset($name)) {
+            $explodedNamespace = explode('\\', get_called_class());
+            return $this->name = Str::title(array_pop($explodedNamespace));
+        }
+
+        $this->name = $name;
     }
 
     protected function setUrl()
@@ -49,6 +68,6 @@ abstract class Channel
 
     public function setIcon()
     {
-        $this->icon = config('share.channels.' . $this->name . '.icon');
+        $this->icon = config('share.channels.' . Str::lower($this->name) . '.icon');
     }
 }
