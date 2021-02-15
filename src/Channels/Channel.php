@@ -1,6 +1,6 @@
 <?php
 
-namespace syvbyen\Share\Channels;
+namespace syvbyen\SocialShare\Channels;
 
 use Exception;
 use Illuminate\Support\Facades\Request;
@@ -68,6 +68,6 @@ abstract class Channel
 
     public function setIcon()
     {
-        $this->icon = config('share.channels.' . Str::lower($this->name) . '.icon');
+        $this->icon = config('social-share.channels.' . Str::lower($this->name) . '.icon');
     }
 }

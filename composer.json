@@ -1,5 +1,5 @@
 {
-    "name": "syvbyen/share",
+    "name": "syvbyen/social-share",
     "description": "Social share buttons for your Laravel project",
     "license": "MIT",
     "authors": [
@@ -15,20 +15,19 @@
     },
     "autoload": {
         "psr-4": {
-            "syvbyen\\Share\\": "src/"
+            "syvbyen\\SocialShare\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "syvbyen\\Share\\Tests\\": "tests/"
+            "syvbyen\\SocialShare\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "syvbyen\\Share\\ShareServiceProvider"
+                "syvbyen\\SocialShare\\SocialShareServiceProvider"
             ]
         }
     }
-
 }

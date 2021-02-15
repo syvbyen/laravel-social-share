@@ -1,6 +1,6 @@
 <?php
 
-namespace syvbyen\Share\Channels;
+namespace syvbyen\SocialShare\Channels;
 
 class Twitter extends Channel
 {

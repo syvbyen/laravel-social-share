@@ -1,6 +1,6 @@
 <div class="social-share__wrapper">
 
-    <p class="social-share__tagline">@lang('share::app.share')</p>
+    <p class="social-share__tagline">@lang('social-share::social-share.share')</p>
 
     @foreach($channels as $channel)
 

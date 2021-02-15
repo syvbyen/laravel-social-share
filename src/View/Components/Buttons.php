@@ -1,6 +1,6 @@
 <?php
 
-namespace syvbyen\Share\View\Components;
+namespace syvbyen\SocialShare\View\Components;
 
 use Illuminate\View\Component;
 
@@ -8,6 +8,6 @@ class Buttons extends Component
 {
     public function render()
     {
-        return view('share::buttons');
+        return view('social-share::buttons');
     }
 }
