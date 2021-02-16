@@ -93,13 +93,13 @@ You are more than welcome to publish the view file and make it your own. This is
 
 </div>
 ```
-You can f.ex change the ```$shareable->icon``` to a src in the config and use an image instead. You can publish the view file like so:
+You can f.ex change the ```$shareable->icon``` to an image source in the config and use an <img> tag instead. You can publish the view file like so:
 ```bash
 php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServiceProvider" --tag=view
 ```
 
 ## Localization file
-You can publish the publish file of the package.
+You can publish the language file of the package.
 ```bash
 php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServiceProvider" --tag=lang
 ```
