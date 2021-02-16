@@ -42,18 +42,19 @@ abstract class Shareable
         ];
     }
 
-    /** 
+    /**
      * This defaults to capitalizing the class name
      * as the name to show in the view. If the
      * word needs a translation, or if the
-     * capitalization is special like 
-     * "LinkedIn" you can run the 
-     *  method in register()
+     * capitalization is special like
+     * "LinkedIn" you can run the
+     *  method in register().
      * */
     protected function setName($name = null)
     {
         if (!isset($name)) {
             $explodedNamespace = explode('\\', get_called_class());
+
             return $this->name = Str::title(array_pop($explodedNamespace));
         }
 
@@ -72,6 +73,6 @@ abstract class Shareable
 
     protected function config($key)
     {
-        return config('social-share.shareables.' . Str::lower($this->name) . '.' . $key);
+        return config('social-share.shareables.'.Str::lower($this->name).'.'.$key);
     }
 }

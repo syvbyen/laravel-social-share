@@ -20,15 +20,15 @@ return [
             'icon' => 'fab fa-twitter',
         ],
         'linkedin' => [
-            'icon' => 'fab fa-linkedin-in'
+            'icon' => 'fab fa-linkedin-in',
         ],
         'email' => [
-            'icon' => 'fas fa-envelope'
+            'icon' => 'fas fa-envelope',
         ],
-        /* 
+        /*
         'pinterest' => [
             'icon' => 'fab fa-pinterest',
         ]
         */
-    ]
+    ],
 ];

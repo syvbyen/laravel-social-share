@@ -2,9 +2,8 @@
 
 namespace syvbyen\SocialShare\View\Composers;
 
-use Illuminate\View\View;
 use Illuminate\Support\Str;
-
+use Illuminate\View\View;
 
 class ShareableComposer
 {
@@ -18,15 +17,15 @@ class ShareableComposer
     /**
      * Goes through all the channels in config('share.channels')
      * and finds the corresponding class in the namespace
-     * Syvbyen\Share\Shareables (src/Shareables)
+     * Syvbyen\Share\Shareables (src/Shareables).
      *
      * return @array
      */
     protected function setShareables()
     {
         foreach (config('social-share.shareables') as $shareable => $value) {
-            $class = 'syvbyen\\SocialShare\\Shareables\\' . Str::title($shareable);
-            $data = (new $class)->getData();
+            $class = 'syvbyen\\SocialShare\\Shareables\\'.Str::title($shareable);
+            $data = (new $class())->getData();
 
             if ($data) {
                 $this->shareables[] = $data;
