@@ -1,8 +1,8 @@
 <?php
 
-namespace syvbyen\SocialShare\Channels;
+namespace syvbyen\SocialShare\Shareables;
 
-class Email extends Channel
+class Email extends Shareable
 {
     protected function register()
     {

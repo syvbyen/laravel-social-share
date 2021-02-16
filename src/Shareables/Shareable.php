@@ -1,12 +1,12 @@
 <?php
 
-namespace syvbyen\SocialShare\Channels;
+namespace syvbyen\SocialShare\Shareables;
 
 use Exception;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
 
-abstract class Channel
+abstract class Shareable
 {
     protected $icon;
     protected $url;
@@ -35,7 +35,7 @@ abstract class Channel
             throw new Exception('The $href property is empty. You need to give your class a shareable link');
         }
 
-        return [
+        return (object) [
             'href' => $this->href,
             'name' => $this->name,
             'icon' => $this->icon,
@@ -48,8 +48,7 @@ abstract class Channel
      * word needs a translation, or if the
      * capitalization is special like 
      * "LinkedIn" you can run the 
-     * method in the register 
-     * function with you new name.
+     *  method in register()
      * */
     protected function setName($name = null)
     {
@@ -66,8 +65,13 @@ abstract class Channel
         $this->url = Request::url();
     }
 
-    public function setIcon()
+    protected function setIcon()
     {
-        $this->icon = config('social-share.channels.' . Str::lower($this->name) . '.icon');
+        $this->icon = $this->config('icon');
+    }
+
+    protected function config($key)
+    {
+        return config('social-share.shareables.' . Str::lower($this->name) . '.' . $key);
     }
 }

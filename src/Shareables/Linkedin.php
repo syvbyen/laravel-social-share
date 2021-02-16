@@ -1,8 +1,8 @@
 <?php
 
-namespace syvbyen\SocialShare\Channels;
+namespace syvbyen\SocialShare\Shareables;
 
-class Linkedin extends Channel
+class Linkedin extends Shareable
 {
     protected function register()
     {
