@@ -1,7 +1,7 @@
 
 <h1 align="center">🔗 Laravel Social Share 🔗</h1>
 
-This package will make social share links to the most popular platforms (you can remove the ones you don't want in the config). With links to share the page they are currently on. Icons are using [Font Awesome](https://fontawesome.com/) by default, but you can change this in the config. **And its super easy to use**
+This package will make social share links to the most popular platforms (you can remove the ones you don't want in the config). With links to share the page they are currently on. Icons are using [Font Awesome](https://fontawesome.com/) by default, but you can change this in the config.
 
 ## Table of Contents
 
@@ -20,11 +20,11 @@ composer require syvbyen/laravel-social-share
 ```
 
 ## Usage
-To use it all you have to do is including the component in your view. Like this:
+To use it all you have to do is including the component in your view.
 ```php
 <x-social-share>
 ```
-For versions of Laravel without components, you can use the directive instead.
+For Laravel versions without components, you can use the directive instead.
 ```php
 @socialshare
 ```
@@ -69,7 +69,7 @@ php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServicePro
 ```
 
 ## View
-You are more than welcome to publish the view file and make it your own. This is how it looks right now
+You are more than welcome to publish the view file and make it your own. This is how it looks right now.
 ```html
 <div class="social-share__wrapper">
 
@@ -79,11 +79,11 @@ You are more than welcome to publish the view file and make it your own. This is
 
         <a href="{{ $shareable->href }}" class="social-share__link" rel="noreferrer" target="_blank">
 
-            @isset($shareable->icon)
+                @isset($shareable->icon)
 
-                <i class="social-share__icon {{ $shareable->icon }}"></i>
+                    <i class="social-share__icon {{ $shareable->icon }}"></i>
 
-            @endisset
+                @endisset
 
             <span class="social-share__name">{{ $shareable->name }}</span>
 
@@ -99,13 +99,12 @@ php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServicePro
 ```
 
 ## Localization file
-You can publish the language file of the package
+You can publish the publish file of the package.
 ```bash
 php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServiceProvider" --tag=lang
 ```
 
 ## Todo
-- Add the possibility to use Laravel directives
 - Add _copy to clipboard_ button
 - Design and make CSS
 
