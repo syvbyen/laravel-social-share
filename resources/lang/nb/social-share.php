@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'share' => 'Del det',
+    'share' => 'Del dette',
     'email' => 'Epost',
 ];

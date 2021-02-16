@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'share' => 'Share it',
+    'share' => 'Share this',
     'email' => 'Email',
 ];
