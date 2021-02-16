@@ -107,4 +107,4 @@ php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServicePro
 - Design and make CSS
 
 ## License
-Social Share is open-source software licensed under the MIT license
+Social Share is open-source software licensed under the [MIT license](https://github.com/syvbyen/laravel-social-share/blob/master/LICENSE)
