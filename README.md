@@ -11,7 +11,7 @@ This package will make social share links to the most popular platforms (you can
 - [View](#view)
 - [Localization](#license)
 - [Todo](#todo)
-- [Credits](#credits)
+- [License](#license)
 
 ## Installation
 You may use composer to install this package to your Laravel project
