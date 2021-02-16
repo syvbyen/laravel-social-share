@@ -24,7 +24,10 @@ To use it all you have to do is including the component in your view. Like this:
 ```php
 <x-social-share>
 ```
-I am planning to make it possible to use a Laravel directive also. So it's a little bit more backward compatible.
+For versions of Laravel without components, you can use the directive instead.
+```php
+@socialshare
+```
 
 ## Configuration
 

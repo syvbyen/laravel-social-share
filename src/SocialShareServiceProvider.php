@@ -2,6 +2,7 @@
 
 namespace syvbyen\SocialShare;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use syvbyen\SocialShare\View\Components\Share;
@@ -62,5 +63,7 @@ class SocialShareServiceProvider extends ServiceProvider
         $this->loadViewComponentsAs('social', [
             Share::class,
         ]);
+
+        Blade::include('social-share::social-share', 'socialshare');
     }
 }
