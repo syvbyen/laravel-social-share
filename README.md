@@ -96,7 +96,7 @@ php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServicePro
 ```
 
 ## Localization file
-You can publish the publish file of the package
+You can publish the language file of the package
 ```bash
 php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServiceProvider" --tag=lang
 ```
