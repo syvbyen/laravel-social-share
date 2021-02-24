@@ -107,6 +107,7 @@ php artisan vendor:publish --provider="syvbyen\SocialShare\SocialShareServicePro
 ## Todo
 - Add _copy to clipboard_ button
 - Design and make CSS
+- Give option to set the URL manually (if you want to share another page than the on you're on)
 
 ## License
 Social Share is open-source software licensed under the [MIT license](https://github.com/syvbyen/laravel-social-share/blob/master/LICENSE)
